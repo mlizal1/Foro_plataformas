@@ -1,0 +1,125 @@
+#notificacion {
+  --colorOscuro: #212121;
+  --colorClaro: #9e9e9e;
+  --width: 400px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  top: 0px;
+  left: calc((100vw - var(--width)) / 2);
+  width: var(--width);
+}
+
+#notificacion .exito {
+  --colorOscuro: #33691e;
+  --colorClaro: #8bc34a;
+}
+
+#notificacion .informacion {
+  --colorOscuro: #01579b;
+  --colorClaro: #03a9f4;
+}
+
+#notificacion .error {
+  --colorOscuro: #bf360c;
+  --colorClaro: #ff5722;
+}
+
+#notificacion .advertencia {
+  --colorOscuro: #e65100;
+  --colorClaro: #ff9800;
+}
+
+#notificacion div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  border: 2px solid var(--colorOscuro);
+  background: var(--colorClaro);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#notificacion div h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: var(--colorOscuro);
+}
+
+#notificacion div p {
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--colorOscuro);
+}
+
+#notificacion div > span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  margin: 5px;
+  right: 0px;
+  top: 0px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--colorOscuro);
+  border: 2px solid var(--colorOscuro);
+  border-radius: 15px;
+}
+
+#notificacion div > span i {
+  font-size: 25px;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#notificacion div > span i:hover {
+  transform: rotate(270deg);
+}
+
+@media screen and (max-width: 800px) {
+  #notificacion {
+    --width: 250px;
+  }
+
+  #notificacion div {
+    margin: 8px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--colorOscuro);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  #notificacion div h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  #notificacion div p {
+    font-size: 16px;
+  }
+
+  #notificacion div > span {
+    padding-left: 6px;
+    margin: 2px;
+    font-size: 14px;
+    border: 1px solid var(--colorOscuro);
+  }
+
+  #notificacion div > span i {
+    font-size: 23px;
+    margin-left: 3px;
+  }
+}

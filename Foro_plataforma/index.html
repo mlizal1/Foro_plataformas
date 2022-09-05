@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>liquidacion de empeados</title>
+
+    <meta name="theme-color" content="#F49D15" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="empleados.css" />
+  </head>
+  <body>
+    <h1>Sistema de empleados</h1>
+    <section class="container">
+      <article>
+        <h2>Datos personales</h2>
+        <form id="registro_persona">
+          <button type="menu">
+            <img src="perfil.jpg" width="60" />
+          </button>
+          <br /><br />
+          <label>Cédula</label>
+          <input name="cedula" type="text" />
+          <br /><br />
+          <label>Nombres</label>
+          <input name="nombre" type="text" />
+          <br /><br />
+          <label>Apellidos</label>
+          <input name="apellido" type="text" />
+          <br /><br />
+          <label>Género</label>
+          <select name="genero">
+            <option disabled selected hidden></option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
+          <br /><br />
+          <label>Fecha de nacimiento</label>
+          <input name="fecha_nacimiento" type="date" class="form-control" />
+          <br /><br />
+          <label class="date">Fecha de ingreso</label>
+          <input name="fecha_ingreso" type="date" class="form-control" />
+          <br /><br />
+          <label>salario</label>
+          <input name="salario" type="number" />
+          <button type="submit">Enviar</button>
+        </form>
+        <hr />
+
+        <form id="calculo">
+          <h2>Calculos</h2>
+          <label>Cédula</label>
+          <input name="cedula" type="text" />
+          <br /><br />
+          <button type="submit">Calcular</button>
+        </form>
+        <hr />
+      </article>
+    </section>
+
+    <footer></footer>
+    <script type="text/javascript" src="./assets/js/crud/insert.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/calculo/calculo.js"
+    ></script>
+  </body>
+</html>
